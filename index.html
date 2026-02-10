@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NovaStrike - Home</title>
-<link rel="stylesheet" href="/assets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaStrike</title>
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
+<header>
+    <div class="logo"><img src="/assets/logo.png" alt="NovaStrike"></div>
+</header>
 
 <nav>
 <a href="/" class="active">Home</a>
@@ -14,31 +20,16 @@
 <a href="/support/">Support</a>
 </nav>
 
-<div class="hero">
-<h1>Welcome to NovaStrike</h1>
-<p id="system-status">Loading status...</p>
-</div>
-
-<div class="card">
-<p>We build powerful Discord bots and websites. Explore our plans and join our network!</p>
-</div>
+<main class="landing">
+    <div class="hero">
+        <h1>Welcome to <span style="color:red">NovaStrike</span></h1>
+        <p>The ultimate Discord bots & web hosting platform.</p>
+        <a class="cta-btn" href="/plans/">View Plans</a>
+        <p id="system-status">Loading status...</p>
+    </div>
+</main>
 
 <footer>© 2026 NovaStrike</footer>
-
-<script>
-// Smooth fade-in
-document.body.style.opacity=0;
-window.addEventListener("DOMContentLoaded",()=>{
-    document.body.style.transition="opacity 0.8s";
-    document.body.style.opacity=1;
-});
-
-// System status animation
-const states=["🟢 ONLINE","🟡 DEPLOYING","🔴 MAINTENANCE"];
-let i=0;
-const statusEl=document.getElementById("system-status");
-setInterval(()=>{statusEl.innerText=states[i]; i=(i+1)%states.length;},2000);
-</script>
-
+<script src="/script.js"></script>
 </body>
 </html>
