@@ -11,7 +11,7 @@
 <a href="/">Home</a>
 <a href="/plans/">Plans</a>
 <a href="/about/">About Us</a>
-<a href="/support/">Support</a>
+<a href="/support/" class="active">Support</a>
 </nav>
 
 <div class="hero">
@@ -24,23 +24,17 @@
 <button id="sendBtn">Send</button>
 </div>
 
-<script>
-// Highlight active nav
-document.querySelectorAll("nav a").forEach(link=>{
-  if(link.href === window.location.href){
-    link.style.color="#ff0000";
-    link.style.textShadow="0 0 10px red";
-  }
-});
+<footer>© 2026 NovaStrike</footer>
 
+<script>
 // Support form logic
 document.getElementById("sendBtn").addEventListener("click", ()=>{
-  const name=document.getElementById("name").value;
-  const msg=document.getElementById("message").value;
-  if(!name||!msg){alert("Please fill in all fields."); return;}
-  alert("Support request sent to NovaStrike.");
-  document.getElementById("name").value="";
-  document.getElementById("message").value="";
+    const name=document.getElementById("name").value;
+    const msg=document.getElementById("message").value;
+    if(!name||!msg){alert("Please fill in all fields."); return;}
+    alert("Support request sent to NovaStrike.");
+    document.getElementById("name").value="";
+    document.getElementById("message").value="";
 });
 </script>
 
