@@ -4,15 +4,11 @@
 <meta charset="UTF-8">
 <title>NovaStrike - Home</title>
 <link rel="stylesheet" href="/assets/style.css">
-<style>
-/* Inline extra styling voor Home-specifiek script */
-#system-status { font-size:24px; margin-top:20px; text-align:center; color:red; text-shadow:0 0 10px red; }
-</style>
 </head>
 <body>
 
 <nav>
-<a href="/">Home</a>
+<a href="/" class="active">Home</a>
 <a href="/plans/">Plans</a>
 <a href="/about/">About Us</a>
 <a href="/support/">Support</a>
@@ -27,34 +23,21 @@
 <p>We build powerful Discord bots and websites. Explore our plans and join our network!</p>
 </div>
 
-<!-- Inline scripts -->
+<footer>© 2026 NovaStrike</footer>
+
 <script>
 // Smooth fade-in
-document.body.style.opacity = 0;
-window.addEventListener("DOMContentLoaded", () => {
-  document.body.style.transition = "opacity 0.8s";
-  document.body.style.opacity = 1;
-});
-
-// Button hover glow
-document.querySelectorAll("a, button").forEach(el => {
-  el.addEventListener("mouseover",()=>el.style.boxShadow="0 0 15px red");
-  el.addEventListener("mouseout",()=>el.style.boxShadow="none");
+document.body.style.opacity=0;
+window.addEventListener("DOMContentLoaded",()=>{
+    document.body.style.transition="opacity 0.8s";
+    document.body.style.opacity=1;
 });
 
 // System status animation
-const states = ["🟢 ONLINE","🟡 DEPLOYING","🔴 MAINTENANCE"];
+const states=["🟢 ONLINE","🟡 DEPLOYING","🔴 MAINTENANCE"];
 let i=0;
-const statusEl = document.getElementById("system-status");
+const statusEl=document.getElementById("system-status");
 setInterval(()=>{statusEl.innerText=states[i]; i=(i+1)%states.length;},2000);
-
-// Highlight active nav
-document.querySelectorAll("nav a").forEach(link=>{
-  if(link.href === window.location.href){
-    link.style.color="#ff0000";
-    link.style.textShadow="0 0 10px red";
-  }
-});
 </script>
 
 </body>
