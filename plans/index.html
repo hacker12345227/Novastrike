@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NovaStrike - Plans</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav>
+<a href="/">Home</a>
+<a href="/plans/">Plans</a>
+<a href="/about/">About Us</a>
+<a href="/support/">Support</a>
+</nav>
+
+<div class="hero">
+<h1>Our Plans</h1>
+</div>
+
+<div class="card">
+<button data-plan="Starter">Starter Plan</button>
+<button data-plan="Pro">Pro Plan</button>
+<button data-plan="Enterprise">Enterprise Plan</button>
+</div>
+
+<script>
+// Highlight active nav
+document.querySelectorAll("nav a").forEach(link=>{
+  if(link.href === window.location.href){
+    link.style.color="#ff0000";
+    link.style.textShadow="0 0 10px red";
+  }
+});
+
+// Button click alerts
+document.querySelectorAll("button[data-plan]").forEach(btn=>{
+  btn.addEventListener("click",()=>alert("NovaStrike order created for: "+btn.getAttribute("data-plan")));
+});
+</script>
+
+</body>
+</html>
