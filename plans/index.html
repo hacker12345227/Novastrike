@@ -9,7 +9,7 @@
 
 <nav>
 <a href="/">Home</a>
-<a href="/plans/">Plans</a>
+<a href="/plans/" class="active">Plans</a>
 <a href="/about/">About Us</a>
 <a href="/support/">Support</a>
 </nav>
@@ -24,18 +24,12 @@
 <button data-plan="Enterprise">Enterprise Plan</button>
 </div>
 
-<script>
-// Highlight active nav
-document.querySelectorAll("nav a").forEach(link=>{
-  if(link.href === window.location.href){
-    link.style.color="#ff0000";
-    link.style.textShadow="0 0 10px red";
-  }
-});
+<footer>© 2026 NovaStrike</footer>
 
+<script>
 // Button click alerts
 document.querySelectorAll("button[data-plan]").forEach(btn=>{
-  btn.addEventListener("click",()=>alert("NovaStrike order created for: "+btn.getAttribute("data-plan")));
+    btn.addEventListener("click",()=>alert("NovaStrike order created for: "+btn.getAttribute("data-plan")));
 });
 </script>
 
