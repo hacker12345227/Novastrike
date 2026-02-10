@@ -1,0 +1,82 @@
+/* NovaStrike Main Stylesheet */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0000;
+    color: #fff;
+}
+
+nav {
+    background: #300;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #f33;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #ff0000;
+    text-shadow: 0 0 10px red;
+}
+
+.hero {
+    background: #400;
+    padding: 80px;
+    text-align: center;
+}
+
+.card {
+    background: #200;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background: red;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    box-shadow: 0 0 15px red;
+}
+
+#system-status {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #200;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #300;
+    color: #fff;
+    margin-top: 50px;
+}
