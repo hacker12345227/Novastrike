@@ -64,7 +64,14 @@ nav a.active { border-bottom: 2px solid #ff2b2b; padding-bottom: 4px; }
     margin: 40px 0;
     padding: 30px;
     background: #101010;
-    border-left: 4px solid #ff2b2b;
+    border-left: 3px solid #ff2b2b; /* subtiel smalle rode balk */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2); /* subtle glow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
 }
 
 /* BUTTONS */
