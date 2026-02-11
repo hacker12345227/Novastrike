@@ -1,114 +1,105 @@
-* {
-    box-sizing: border-box;
-}
+* { box-sizing:border-box; }
 
 body {
-    margin: 0;
-    background: #000;
-    color: #ff2b2b;
-    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#000;
+    color:#ddd;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+/* HEADER & NAV (unchanged look) */
 header {
-    background: #000;
-    border-bottom: 2px solid #ff2b2b;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
+    background:#000;
+    border-bottom:2px solid #ff2b2b;
+    padding:15px 30px;
 }
 
-header .logo img {
-    height: 45px;
-}
-
-/* NAV */
 nav {
-    background: #000;
-    border-bottom: 1px solid #ff2b2b;
-    padding: 15px;
-    text-align: center;
+    background:#000;
+    border-bottom:1px solid #ff2b2b;
+    padding:15px;
+    text-align:center;
 }
 
 nav a {
-    color: #ff2b2b;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding-bottom: 5px;
+    color:#ff2b2b;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:bold;
+    letter-spacing:1px;
 }
 
 nav a:hover {
-    text-shadow: 0 0 10px red;
+    text-shadow:0 0 10px red;
 }
 
 nav a.active {
-    border-bottom: 2px solid #ff2b2b;
+    border-bottom:2px solid #ff2b2b;
+    padding-bottom:4px;
 }
 
 /* HERO */
 .hero {
-    padding: 100px 20px;
-    text-align: center;
-    border-bottom: 2px solid #ff2b2b;
+    padding:100px 20px;
+    text-align:center;
+    border-bottom:2px solid #ff2b2b;
+    background:radial-gradient(circle at top,#140000,#000 70%);
 }
 
 .hero h1 {
-    font-size: 48px;
-    text-shadow: 0 0 20px red;
+    font-size:48px;
+    color:#ff2b2b;
+    text-shadow:0 0 20px red;
 }
 
-/* CONTAINERS */
+.hero p {
+    max-width:700px;
+    margin:auto;
+}
+
+/* CONTENT SECTIONS */
 .card {
-    border: 2px solid #ff2b2b;
-    margin: 40px auto;
-    max-width: 900px;
-    padding: 30px;
-}
-
-/* BUTTONS */
-button, .cta-btn {
-    background: black;
-    color: #ff2b2b;
-    border: 2px solid #ff2b2b;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-button:hover, .cta-btn:hover {
-    background: #ff2b2b;
-    color: black;
-    box-shadow: 0 0 20px red;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    border-left:4px solid #ff2b2b;
+    background:linear-gradient(90deg,#050000,#000);
 }
 
 /* PRICING */
 .plan {
-    border: 2px solid #ff2b2b;
-    padding: 25px;
-    margin: 25px 0;
+    margin:40px 0;
+    padding:30px;
+    border-left:4px solid #ff2b2b;
+    background:linear-gradient(90deg,#070000,#000);
 }
 
-.plan h2 {
-    margin-top: 0;
+/* BUTTONS */
+button, .cta-btn {
+    background:black;
+    color:#ff2b2b;
+    border:2px solid #ff2b2b;
+    padding:15px 35px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
 }
 
-/* INPUTS */
-input, textarea {
-    width: 90%;
-    background: black;
-    border: 2px solid #ff2b2b;
-    color: #ff2b2b;
-    padding: 12px;
-    margin: 10px 0;
+button:hover, .cta-btn:hover {
+    background:#ff2b2b;
+    color:black;
+    box-shadow:0 0 20px red;
 }
+
+/* TEXT */
+h1,h2,h3 { color:#ff2b2b; }
+p,li { color:#ddd; }
 
 /* FOOTER */
 footer {
-    border-top: 2px solid #ff2b2b;
-    padding: 25px;
-    text-align: center;
-    margin-top: 80px;
+    border-top:2px solid #ff2b2b;
+    padding:25px;
+    text-align:center;
+    margin-top:80px;
 }
