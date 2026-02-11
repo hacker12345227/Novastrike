@@ -2,45 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Support - TitanPulse</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NovaStrike - Support</title>
-<link rel="icon" type="image/png" href="/assets/logo.png">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <header>
-    <div class="logo"><img src="/assets/logo.png" alt="NovaStrike"></div>
+    <div class="logo">
+        <h2>TitanPulse</h2>
+    </div>
 </header>
 
 <nav>
-<a href="/">Home</a>
-<a href="/plans/">Plans</a>
-<a href="/about/">About Us</a>
-<a href="/support/" class="active">Support</a>
+    <a href="../">Home</a>
+    <a href="../plans/">Plans</a>
+    <a href="../about/">About</a>
+    <a href="./" class="active">Support</a>
 </nav>
 
-<main>
-<div class="hero"><h1>Support</h1></div>
-<div class="card">
-<input id="name" placeholder="Your Name"><br>
-<textarea id="message" placeholder="Your Issue"></textarea><br>
-<button id="sendBtn">Send</button>
+<div class="hero">
+    <h1>Support Center</h1>
+    <p>Need help? Open a support ticket instantly.</p>
 </div>
 
-<footer>© 2026 NovaStrike</footer>
+<div class="card">
+    <h2>Open a Ticket</h2>
+    <p>
+        Click the button below to open a private support ticket in our Discord server.
+        Our team will assist you as soon as possible.
+    </p>
 
-<script src="/script.js"></script>
-<script>
-// Support form logic
-document.getElementById("sendBtn").addEventListener("click", ()=>{
-    const name=document.getElementById("name").value;
-    const msg=document.getElementById("message").value;
-    if(!name||!msg){alert("Please fill in all fields."); return;}
-    alert("Support request sent to NovaStrike.");
-    document.getElementById("name").value="";
-    document.getElementById("message").value="";
-});
-</script>
+    <a href="https://discord.com/channels/1470861044325941331/1470876394652303412" target="_blank">
+        <button>Open Support Ticket</button>
+    </a>
+</div>
+
+<div class="card">
+    <h2>Why Discord Support?</h2>
+    <p>
+        Using Discord allows us to provide faster responses, live chat, file sharing,
+        and real-time updates about your bot or service.
+    </p>
+
+    <p>
+        All tickets are handled by our TitanPulse support team and tracked for quality and speed.
+    </p>
+</div>
+
+<footer>
+    © TitanPulse
+</footer>
+
 </body>
 </html>
