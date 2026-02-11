@@ -12,6 +12,7 @@ body {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* logo links, nav rechts */
     padding: 15px 30px;
     background: #000;
     border-bottom: 2px solid #ff2b2b;
@@ -19,20 +20,21 @@ header {
 
 header .logo {
     display: flex;
-    align-items: center;       /* verticaal centreren */
+    align-items: center;       /* logo + tekst verticaal centreren */
 }
 
 header .logo img {
-    height: 50px;              /* logo hoogte */
-    margin-right: 15px;
+    height: 50px;              /* pas hier je logohoogte aan */
+    margin-right: 15px;        /* ruimte tussen logo en tekst */
 }
 
 header .logo h2 {
     color: #ff2b2b;
     font-size: 24px;
     margin: 0;
-    white-space: nowrap;       /* voorkomt dat de tekst onder het logo valt */
+    white-space: nowrap;       /* voorkomt dat tekst onder logo valt */
 }
+
 
 /* NAVBAR */
 nav {
