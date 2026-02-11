@@ -17,8 +17,13 @@ header {
     border-bottom: 2px solid #ff2b2b;
 }
 
+header .logo {
+    display: flex;
+    align-items: center;       /* verticaal centreren */
+}
+
 header .logo img {
-    height: 50px;
+    height: 50px;              /* logo hoogte */
     margin-right: 15px;
 }
 
@@ -26,6 +31,7 @@ header .logo h2 {
     color: #ff2b2b;
     font-size: 24px;
     margin: 0;
+    white-space: nowrap;       /* voorkomt dat de tekst onder het logo valt */
 }
 
 /* NAVBAR */
