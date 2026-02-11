@@ -1,3 +1,4 @@
+/* GLOBAL */
 * { box-sizing: border-box; }
 
 body {
@@ -27,7 +28,7 @@ header .logo h2 {
     margin: 0;
 }
 
-
+/* NAVBAR */
 nav {
     background: #000;
     border-bottom: 1px solid #ff2b2b;
@@ -46,7 +47,7 @@ nav a {
 nav a:hover { text-shadow: 0 0 10px red; }
 nav a.active { border-bottom: 2px solid #ff2b2b; padding-bottom: 4px; }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
     padding: 100px 20px;
     text-align: center;
@@ -64,7 +65,7 @@ nav a.active { border-bottom: 2px solid #ff2b2b; padding-bottom: 4px; }
     margin: auto;
 }
 
-/* CONTENT CARDS / PLANS */
+/* CARDS & PLANS */
 .card, .plan {
     max-width: 900px;
     margin: 60px auto;
@@ -72,7 +73,7 @@ nav a.active { border-bottom: 2px solid #ff2b2b; padding-bottom: 4px; }
     background: #101010;
     box-shadow: 0 0 30px #000;
     border: 1px solid #ff2b2b;
-    border-radius: 12px; /* afgeronde hoeken */
+    border-radius: 12px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -91,7 +92,8 @@ button, .cta-btn {
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 8px; /* afgeronde knoppen */
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
 button:hover, .cta-btn:hover {
@@ -101,7 +103,11 @@ button:hover, .cta-btn:hover {
 }
 
 /* TEXT */
-h1, h2, h3 { color: #ff2b2b; text-shadow: 0 0 10px rgba(255,0,0,0.3); }
+h1, h2, h3 { 
+    color: #ff2b2b; 
+    text-shadow: 0 0 10px rgba(255,0,0,0.3); 
+}
+
 p, li { color: #ddd; }
 
 /* FOOTER */
@@ -110,5 +116,5 @@ footer {
     padding: 25px;
     text-align: center;
     margin-top: 80px;
-    border-radius: 0 0 12px 12px; /* afgeronde hoeken onderaan footer */
+    border-radius: 0 0 12px 12px;
 }
