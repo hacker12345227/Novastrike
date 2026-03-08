@@ -160,11 +160,13 @@ footer {
     opacity: 0.8;
 }
 
-footer .credit a {
-    color: #ff2b2b;
+.footer-credit a {
+    color: #ff2b2b;          /* linkkleur veranderd naar blauw */
     text-decoration: none;
+    transition: 0.2s;
 }
 
-footer .credit a:hover {
-    text-shadow: 0 0 10px red;
+.footer-credit a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px #ff2b2b; /* hover glow ook blauw */
 }
