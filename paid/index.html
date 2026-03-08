@@ -24,9 +24,9 @@
     margin-bottom:20px;
 }
 
-.reason{
+.message{
     font-size:22px;
-    margin-top:10px;
+    margin-top:20px;
     color:#fff;
     font-weight:bold;
 }
@@ -53,15 +53,13 @@
 
 <img src="../assets/vink.png" alt="Betaald">
 
-<h1>Betaald</h1>
+<h1 id="title">Payment</h1>
 
-<p>U heeft betaald voor:</p>
-
-<div class="reason" id="reden">Laden...</div>
+<div class="message" id="message">Loading...</div>
 
 <br>
 
-<a class="cta-btn" href="/">Terug naar Home</a>
+<a class="cta-btn" href="/">Back to Home</a>
 
 </div>
 
@@ -74,12 +72,23 @@
 
 <script>
 const params = new URLSearchParams(window.location.search);
-const reden = params.get("reden");
 
-if(reden){
-    document.getElementById("reden").textContent = decodeURIComponent(reden);
+const language = params.get("language");
+const reden = params.get("reden") || "Unknown";
+
+const title = document.getElementById("title");
+const message = document.getElementById("message");
+
+if(language === "nl"){
+
+    title.textContent = "Betaald";
+    message.textContent = "Uw betaling voor " + reden + " is succesvol verwerkt!";
+
 }else{
-    document.getElementById("reden").textContent = "Onbekende betaling";
+
+    title.textContent = "Paid";
+    message.textContent = "Your payment for " + reden + " has been processed successfully!";
+
 }
 </script>
 
