@@ -161,12 +161,100 @@ footer {
 }
 
 .footer-credit a {
-    color: #ff2b2b;          /* linkkleur veranderd naar blauw */
+    color: #ff2b2b;
     text-decoration: none;
     transition: 0.2s;
 }
 
 .footer-credit a:hover {
     text-decoration: underline;
-    text-shadow: 0 0 5px #ff2b2b; /* hover glow ook blauw */
+    text-shadow: 0 0 5px #ff2b2b;
+}
+
+/* ======================= */
+/* RESPONSIVE MEDIA QUERIES */
+/* ======================= */
+
+/* Tablets en kleinere schermen */
+@media (max-width: 992px) {
+    header, nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    header .logo h2 {
+        font-size: 20px;
+    }
+
+    nav a {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .card, .plan {
+        margin: 40px 20px;
+        padding: 25px;
+    }
+
+    button, .cta-btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 576px) {
+    header {
+        padding: 8px 15px;
+    }
+
+    header .logo h2 {
+        font-size: 18px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .card, .plan {
+        margin: 30px 10px;
+        padding: 20px;
+    }
+
+    button, .cta-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 12px;
+    }
 }
