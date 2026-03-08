@@ -1,0 +1,172 @@
+/* GLOBAL */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* DARK OVERLAY VOOR LEESBAARHEID */
+body::before {
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #000;
+    border-bottom: 2px solid #ff2b2b;
+    z-index: 10;
+    position: relative;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .logo h2 {
+    color: #ff2b2b;
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* NAVBAR */
+nav {
+    background: #000;
+    border-bottom: 1px solid #ff2b2b;
+    padding: 15px;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+nav a {
+    color: #ff2b2b;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px red;
+}
+
+nav a.active {
+    border-bottom: 2px solid #ff2b2b;
+    padding-bottom: 4px;
+}
+
+/* HERO */
+.hero {
+    padding: 120px 20px;
+    text-align: center;
+    background: transparent; /* overlay zorgt voor donker effect */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff2b2b;
+    text-shadow: 0 0 20px red;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* CARDS */
+.card, .plan {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(16,16,16,0.85); /* semi-transparant zodat achtergrond zichtbaar blijft */
+    border: 1px solid #ff2b2b;
+    border-radius: 12px;
+    box-shadow: 0 0 30px #000;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover, .plan:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 40px rgba(255,0,0,0.4);
+}
+
+/* BUTTONS */
+button, .cta-btn {
+    display: inline-block;
+    background: black;
+    color: #ff2b2b;
+    border: 2px solid #ff2b2b;
+    padding: 15px 35px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+button:hover, .cta-btn:hover {
+    background: #ff2b2b;
+    color: black;
+    box-shadow: 0 0 20px red;
+}
+
+/* TEXT */
+h1, h2, h3 {
+    color: #ff2b2b;
+    text-shadow: 0 0 10px rgba(255,0,0,0.3);
+}
+
+p, li {
+    color: #ddd;
+}
+
+/* FOOTER */
+footer {
+    border-top: 2px solid #ff2b2b;
+    padding: 25px;
+    text-align: center;
+    margin-top: 80px;
+    background: #000;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-credit a {
+    color: #ff2b2b;          /* linkkleur veranderd naar blauw */
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-credit a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px #ff2b2b; /* hover glow ook blauw */
+}
