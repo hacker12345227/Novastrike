@@ -1,28 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bot Control</title>
+    <title>Bot Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            background-color: #5865F2;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #4752C4;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Run Action</h2>
+<h1>Bot Control Panel</h1>
 
-<input type="text" id="serverId" placeholder="Enter Server ID">
+<p>Enter Server ID</p>
+
+<input type="text" id="serverId" placeholder="Server ID">
 <button onclick="run()">Run</button>
+
+<div id="status"></div>
 
 <script>
 async function run() {
     const serverId = document.getElementById("serverId").value;
+    const status = document.getElementById("status");
 
-    await fetch("/run", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            guild_id: serverId
-        })
-    });
+    if (!serverId) {
+        status.innerText = "Please enter a Server ID.";
+        return;
+    }
+
+    status.innerText = "Sending request...";
+
+    try {
+        const response = await fetch("http://192.168.2.45:5000/run", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                guild_id: serverId
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            status.innerText = "Action started successfully.";
+        } else {
+            status.innerText = "Error: " + data.error;
+        }
+
+    } catch (err) {
+        status.innerText = "Failed to connect to server.";
+    }
 }
 </script>
 
