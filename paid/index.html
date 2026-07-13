@@ -4,75 +4,54 @@
 <title>TitanPulse | Payment Complete</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
-
-<style>
-.success-box{
-    max-width:700px;
-    margin:120px auto;
-    padding:50px;
-    text-align:center;
-    background:rgba(16,16,16,0.9);
-    border:1px solid #ff2b2b;
-    border-radius:12px;
-    box-shadow:0 0 40px #000;
-}
-
-.success-box img{
-    width:90px;
-    margin-bottom:20px;
-}
-
-.message{
-    font-size:22px;
-    margin-top:20px;
-    color:#fff;
-    font-weight:bold;
-}
-</style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">
-    <img src="../assets/logo.png" alt="TitanPulse Logo">
-    <h2>TITANPULSE</h2>
-  </div>
+<header id="site-header" class="static">
+  <nav class="wrap">
+    <a href="../" class="logo"><span class="dot"></span>TITAN<span class="pulse-word">PULSE</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../">Home</a></li>
+      <li><a href="../plans/">Plans</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../support/">Support</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
 </header>
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/plans/">Plans</a>
-  <a href="/about/">About</a>
-  <a href="/support/">Support</a>
-</nav>
-
-<div class="success-box">
-
-<img src="../assets/vink.png" alt="Betaald">
-
-<h1 id="title">Payment</h1>
-
-<div class="message" id="message">Loading...</div>
-
-<br>
-
-<a class="cta-btn" href="/">Back to Home</a>
-
-</div>
+<main>
+  <section style="border:none; padding:180px 20px 120px;">
+    <div class="success-box reveal in">
+      <div class="check">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1 id="title">Payment</h1>
+      <div class="message" id="message">Loading...</div>
+      <a class="btn btn-primary" href="../">Back to Home</a>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <p>© 2026 TITANPULSE</p>
-  <p class="footer-credit" style="font-size:12px; margin-top:5px; opacity:0.7; text-align:center;">
-    Website gemaakt door: <a href="https://www.titanpulse.nl/" target="_blank" rel="noopener">TitanPulse</a>
-  </p>
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© 2026 TITANPULSE</span>
+      <span class="footer-credit">Website made by: <a href="https://www.titanpulse.nl/" target="_blank" rel="noopener">TitanPulse</a></span>
+    </div>
+  </div>
 </footer>
 
+<script src="../site.js"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
-
 const language = params.get("language");
 const reden = params.get("reden") || "Unknown";
 
@@ -80,15 +59,11 @@ const title = document.getElementById("title");
 const message = document.getElementById("message");
 
 if(language === "nl"){
-
     title.textContent = "Betaald";
     message.textContent = "Uw betaling voor " + reden + " is succesvol verwerkt!";
-
 }else{
-
     title.textContent = "Paid";
     message.textContent = "Your payment for " + reden + " has been processed successfully!";
-
 }
 </script>
 
